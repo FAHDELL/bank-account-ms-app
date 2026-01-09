@@ -1,15 +1,19 @@
 package fahd.net.customer_service;
 
+import fahd.net.customer_service.config.GlobalConfig;
 import fahd.net.customer_service.entities.Customer;
 import fahd.net.customer_service.repositories.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 
 @SpringBootApplication
+@EnableConfigurationProperties(GlobalConfig.class)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
